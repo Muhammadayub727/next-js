@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { AiOutlineMenu , AiOutlineClose, AiOutlineInstagram, AiOutlineTwitter, AiOutlineFacebook, AiOutlineLinkedin } from 'react-icons/ai'
 import { useState } from 'react'
 
+
 const Navbar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false)
@@ -31,16 +32,16 @@ const Navbar = () => {
                 </Link>
                 <div className='hidden sm:flex'>
                     <ul className='hidden sm:flex'>
-                        <Link href='/about'>
+                        <Link href='../src/pages/about'>
                             <li className='ml-10 text-xl uppercase transition-all duration-500 hover:border-b hover:border-black hover:transition hover:duration-500'>Why us</li>
                         </Link>
-                        <Link href='/contact'>
+                        <Link href='../src/pages/contact'>
                             <li className='ml-10 text-xl uppercase transition-all duration-500 hover:border-b hover:border-black hover:transition hover:duration-500'>Contact</li>
                         </Link>
-                        <Link href='/services'>
+                        <Link href='../src/pages/services'>
                             <li className='ml-10 text-xl uppercase transition-all duration-500 hover:border-b hover:border-black hover:transition hover:duration-500'>Services</li>
                         </Link>
-                        <Link href='/blog'>
+                        <Link href='../src/pages/blog'>
                             <li className='ml-10 text-xl uppercase transition-all duration-500 hover:border-b hover:border-black hover:transition hover:duration-500'>Blog</li>
                         </Link>
                     </ul>
@@ -68,7 +69,7 @@ const Navbar = () => {
                                     Home
                                 </li>
                             </Link>
-                            <Link href="/about">
+                            <Link href="../src/pages/about">
                                 <li
                                     onClick={()=>setMenuOpen(false)}
                                     className='py-4 cursor-pointer list-none'
@@ -76,7 +77,7 @@ const Navbar = () => {
                                     About
                                 </li>
                             </Link>
-                            <Link href="/contact">
+                            <Link href="../src/pages/contact">
                                 <li
                                     onClick={()=>setMenuOpen(false)}
                                     className='py-4 cursor-pointer list-none'
@@ -84,7 +85,7 @@ const Navbar = () => {
                                     Contact
                                 </li>
                             </Link>
-                            <Link href="/services">
+                            <Link href="../src/pages/services">
                                 <li
                                     onClick={()=>setMenuOpen(false)}
                                     className='py-4 cursor-pointer list-none'
@@ -92,7 +93,7 @@ const Navbar = () => {
                                     Services
                                 </li>
                             </Link>
-                            <Link href="/blog">
+                            <Link href="../src/pages/blog">
                                 <li
                                     onClick={()=>setMenuOpen(false)}
                                     className='py-4 cursor-pointer list-none'
