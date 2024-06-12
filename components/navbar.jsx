@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Logo from '../public/next.svg'
 import Link from 'next/link'
-import { AiOutlineMenu , AiOutlineClose} from 'react-icons/ai'
+import { AiOutlineMenu , AiOutlineClose, AiOutlineInstagram, AiOutlineTwitter, AiOutlineFacebook, AiOutlineLinkedin } from 'react-icons/ai'
 import { useState } from 'react'
 
 const Navbar = () => {
@@ -58,6 +58,65 @@ const Navbar = () => {
                             <AiOutlineClose size={25}/>
                         </div>
                     </div>
+
+                        <div className='flex-col py-4'>
+                            <Link href="/">
+                                <li
+                                    onClick={()=>setMenuOpen(false)}
+                                    className='py-4 cursor-pointer list-none'
+                                >
+                                    Home
+                                </li>
+                            </Link>
+                            <Link href="/about">
+                                <li
+                                    onClick={()=>setMenuOpen(false)}
+                                    className='py-4 cursor-pointer list-none'
+                                >
+                                    About
+                                </li>
+                            </Link>
+                            <Link href="/contact">
+                                <li
+                                    onClick={()=>setMenuOpen(false)}
+                                    className='py-4 cursor-pointer list-none'
+                                >
+                                    Contact
+                                </li>
+                            </Link>
+                            <Link href="/services">
+                                <li
+                                    onClick={()=>setMenuOpen(false)}
+                                    className='py-4 cursor-pointer list-none'
+                                >
+                                    Services
+                                </li>
+                            </Link>
+                            <Link href="/blog">
+                                <li
+                                    onClick={()=>setMenuOpen(false)}
+                                    className='py-4 cursor-pointer list-none'
+                                >
+                                    Blog
+                                </li>
+                            </Link>
+                    </div>
+                    <div className='flex flex-row justify-around pt-10 items-center'>
+                        <AiOutlineInstagram size={30} className='cursor-pointer'/>
+                        <AiOutlineFacebook size={30} className='cursor-pointer'/>
+                        <AiOutlineTwitter size={30} className='cursor-pointer'/>
+                        <AiOutlineLinkedin size={30} className='cursor-pointer'/>
+                    </div>
+                    <Link href='/'>
+                        <Image
+                            src={Logo}
+                            alt='Logo'
+                            width='205'
+                            height='75'
+                            className='cursor-pointer pt-6'
+                            priority
+                        />
+                    </Link>
                 </div>
             </div>
         </nav>
